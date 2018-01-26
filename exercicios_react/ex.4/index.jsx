@@ -2,11 +2,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Field from "./field";
-
+import WolfFamily from './wolfFamily'
 
 ReactDOM.render(
-  <Field initialValue='teste'/>
-, document.getElementById('app'));
+    <WolfFamily />, 
+  document.getElementById('app'));
 
 /*jshint ignore:end */
