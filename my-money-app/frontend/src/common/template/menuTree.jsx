@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default props => (
+export default props => ( 
     <li className="treeview">
         <a href>
-            <i className={`fa fa-${props.icon}`}></i>&nbsp;{props.label}
+            <i className={`fa fa-${props.icon}`}></i>
+            <span>{props.label}</span>
             <i className="fa fa-angle-left pull-right"></i>
         </a>
 
