@@ -7,6 +7,7 @@ module.exports = {
         path: __dirname + '/public',
         filename: './app.js'
     },
+    devtool: 'source-map',
     devServer: {
         port: 8080,
         contentBase: './public'

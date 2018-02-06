@@ -16,8 +16,8 @@ class BillingCycleList extends Component {
                 <td>{item.name}</td>
                 <td>{item.month}</td>
                 <td>{item.year}</td>
-                <td>
-                    <button className="btn btn-warning"
+                <td className="table-actions">
+                    <button className="btn btn-warning" style={{marginRight: 5}}
                         onClick={()=> this.props.showUpdate(item)}>
                         <i className="fa fa-pencil"></i>    
                     </button>
@@ -33,7 +33,6 @@ class BillingCycleList extends Component {
     }    
 
     render () {
-        console.log('lista',this.props.list)
         return (
             <div>
                 <table className="table">

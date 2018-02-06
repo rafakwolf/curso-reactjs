@@ -4,7 +4,7 @@ import { reset as resetForm, initialize } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
-const INITIAL_VALUES = {}
+const INITIAL_VALUES = {credits:[{}], debts: [{}]}
 
 export function getList(){
     const request = axios.get(`${BASE_URL}/billingCycles`)
@@ -15,6 +15,7 @@ export function getList(){
 }
 
 function submit(values, method) {
+    console.log('método', method)
     return dispatch => {
         const id = method != 'post' ? values._id : ''
         axios[method](`${BASE_URL}/billingCycles/${id}`, values)
