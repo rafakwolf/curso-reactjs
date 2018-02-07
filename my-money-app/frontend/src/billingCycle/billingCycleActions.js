@@ -21,7 +21,7 @@ function submit(values, method) {
         axios[method](`${BASE_URL}/billingCycles/${id}`, values)
             .then(resp => {
                 toastr.success('Sucesso', 'Operação realizada com sucesso.')
-                dispatch(init())
+                dispatch(init)
             })
             .catch(error => {
                 const errors = error.response.data.errors || ['Algo de errado acounteceu.'] 

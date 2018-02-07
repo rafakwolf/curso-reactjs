@@ -9,6 +9,12 @@ import If from '../common/operator/if'
 
 class ItemList extends Component {
 
+    constructor(props){
+        super(props)
+        this.add.bind(this)
+        this.remove.bind(this)
+    }
+
     add(index, item = {}){
         if (!this.props.readOnly){
             this.props.arrayInsert('billingCycleForm', 'credits', index, item)
@@ -16,7 +22,7 @@ class ItemList extends Component {
     }
 
     remove(index){
-        if (!this.props.readOnly && this.props.list.lenght > 1){
+        if (!this.props.readOnly && this.props.list.length > 1){
             this.props.arrayRemove('billingCycleForm', 'credits', index)
         }        
     }
@@ -48,12 +54,12 @@ class ItemList extends Component {
                     </button>
 
                     <button className="btn btn-warning" style={{marginRight: 5}}
-                        onClick={()=> this.add(index + 1, item)}>
+                        onClick={() => this.add(index + 1, item)}>
                         <i className="fa fa-clone"></i>    
                     </button>
 
                     <button className="btn btn-danger"
-                        onClick={()=> this.remove(index)}>
+                        onClick={() => this.remove(index)}>
                         <i className="fa fa-trash-o"></i>    
                     </button>                    
                 </td>
