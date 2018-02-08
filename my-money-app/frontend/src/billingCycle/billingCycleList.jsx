@@ -17,12 +17,12 @@ class BillingCycleList extends Component {
                 <td>{item.month}</td>
                 <td>{item.year}</td>
                 <td className="table-actions">
-                    <button className="btn btn-warning" style={{marginRight: 5}}
+                    <button type='button' className="btn btn-warning" style={{marginRight: 5}}
                         onClick={()=> this.props.showUpdate(item)}>
                         <i className="fa fa-pencil"></i>    
                     </button>
 
-                    <button className="btn btn-danger"
+                    <button type='button' className="btn btn-danger"
                         onClick={()=> this.props.showRemove(item)}>
                         <i className="fa fa-trash-o"></i>    
                     </button>
